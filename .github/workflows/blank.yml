@@ -24,15 +24,18 @@ jobs:
     needs: build-app
     runs-on: windows-latest
     steps:
-     -run: echo "Kavya"
+     - run: echo "Kavya"
+       shell: bash
 
   Package:
     needs: [build-app, build-db]
     runs-on: windows-latest
-    steps:
-     -run: echo "Running"
+    steps: 
+     - run: echo "Running"
+       shell: bash
 
-
+  buildfinal:
+    runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
